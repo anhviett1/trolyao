@@ -1,0 +1,152 @@
+/* style.css */
+
+/* Reset các mặc định của trình duyệt */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container chính của chatbot */                                                                                                                                                       
+.chat-container {
+  background-color: white;
+  width: 400px;
+  height: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header của chatbot */
+.chat-header {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Nội dung chat */
+.chat-content {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #e8e8e8;
+}
+
+/* style.css */
+
+/* Phần tin nhắn chung */
+.message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 75%;
+  word-wrap: break-word;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid transparent; /* Đặt viền ban đầu */
+}
+
+/* Tin nhắn của người dùng (receiver) căn bên phải */
+.receiver {
+  background-color: blue;
+  color: white;
+  align-self: flex-end;
+  text-align: right;
+  border: 2px solid #4caf50; /* Viền cùng màu nền */
+}
+
+/* Tin nhắn của trợ lý (sender) căn bên trái */
+.sender {
+  background-color: #f1f1f1;
+  color: black;
+  align-self: flex-start;
+  text-align: left;
+  border: 2px solid #f1f1f1; /* Viền cùng màu nền */
+}
+
+
+/* Tách biệt rõ ràng giữa 2 bên */
+.chat-content {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+/* Đảm bảo các tin nhắn bên phải và bên trái có cùng kiểu dáng */
+.receiver, .sender {
+  margin: 5px 10px;
+  padding: 10px;
+  border-radius: 15px;
+}
+/* Input và nút ở dưới cùng */
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  align-items: center;
+}
+
+textarea {
+  width: 80%;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+button {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Cuộn chatbox */
+.chat-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.chat-content::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.chat-content::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

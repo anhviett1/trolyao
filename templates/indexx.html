@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Assistant</title>
+</head>
+<body>   
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Chat bot</h2>
+        </div>        
+        <div class="chat-content" id="chatbot">
+            <div class="message sender">
+                <span class="message-text">Xin chào, tôi là trợ lý của bạn!</span>
+            </div>
+            <div class="message receiver">
+                <span class="message-text">Moi ban nhap hoac noi?</span>
+
+            </div>
+        </div>
+        <div class="chat-input">
+            <textarea id="command_display" rows="2" placeholder="Nói gì đó...."></textarea>  
+            <button class="material-symbols-outlined" id="sendMic" onclick="startRecognition()">mic</button>
+            <button class="material-symbols-outlined" id="sendMessage" onclick="sendCommand()">send</button>  
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
